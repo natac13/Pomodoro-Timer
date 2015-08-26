@@ -1,0 +1,22 @@
+
+.timer, .controls, .task {
+    display: inline-block;
+}
+
+.timer {
+    height: 40%;
+}
+
+.clock {
+    width: 35%;
+    text-align: center;
+    background: #999;
+    border-radius: 0.2em;
+}
+.glyphicon-remove {
+    color: #FF3232;
+}
+
+.glyphicon-ok {
+    color: #32FF32;
+}
