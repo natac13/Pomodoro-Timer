@@ -5,8 +5,11 @@ $(document).ready(function () {
     $seconds = $('.clock-wrapper .clock .seconds'),
     $reset = $('.controls .reset'),
     $play = $('.controls .play'),
+    $pause = $('.controls .pause'),
     seconds = 60,
-    minutes = 25;
+    minutes = 25,
+    $checks = $('.tasks .glyphicon'),
+    clockID;
 
   function init() {
     $minutes.text(minutes);
@@ -14,21 +17,40 @@ $(document).ready(function () {
   }
   init();
 
+  function completed() {
+    $(this).toggleClass('glyphicon-remove');
+    $(this).toggleClass('glyphicon-ok');
+
+  }
 
   function changeTimer() {
-    $seconds.text(seconds--);
+    seconds--;
+    $seconds.text(seconds);
+    if (minutes === 0 && seconds <= 0) {
+      // or run break when ready.
+      resetTimer();
+    } else if (seconds <= 0 && minutes > 0) {
+      seconds = 60;
+      minutes--;
+      $minutes.text(minutes);
+    }
   }
 
   function startTimer() {
     // disable other buttons
     $('.timer .btn').attr("disabled", true);
-    //var clockID = setInterval(changeTimer, 1000);
+    minutes--;
+    $minutes.text(minutes);
+    changeTimer();
+    clockID = setInterval(changeTimer, 1000);
 
 
   }
 
   function pauseTimer() {
-    clearInterval();
+    $('.timer .btn').attr("disabled", false);
+    clearInterval(clockID);
+    minutes++;
   }
 
   function increaseTimer() {
@@ -44,8 +66,10 @@ $(document).ready(function () {
   }
 
   function resetTimer() {
+    clearInterval(clockID);
     $('.timer .btn').attr("disabled", false);
     minutes = 25;
+    seconds = 60;
     $minutes.text(minutes);
     $seconds.text("00");
 
@@ -55,9 +79,11 @@ $(document).ready(function () {
 
 
   $play.click(startTimer);
+  $pause.click(pauseTimer);
   $reset.click(resetTimer);
   $up.click(increaseTimer);
   $down.click(decreaseTimer);
+  $checks.click(completed);
 
 
 
