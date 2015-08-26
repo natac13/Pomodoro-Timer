@@ -28,12 +28,35 @@
 body {
     background: #9BB7B6;
 }
-.timer, .controls, .task {
+.timer, .controls {
     display: inline-block;
 }
 
+.timer .glyhicon,
+.controls .glyphicon {
+    font-size: 2.5em;
+}
+.tasks .glyphicon {
+    font-size: 3em;
+}
+
+
+button {
+    margin: 0;
+
+}
+
+.clock-wrapper {
+    height: 13em;
+}
+
+.clock-wrapper button,
+.clock-wrapper .timer {
+    height: 100%;
+}
+
 .timer {
-    height: 40%;
+    vertical-align: top;
 }
 
 .clock {
@@ -50,6 +73,3 @@ body {
     color: #32FF32;
 }
 
-i {
-    font-size: 3em;
-}
