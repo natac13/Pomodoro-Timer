@@ -40,30 +40,33 @@
 
         <div class="row clock-wrapper">
           <!-- The timer display -->
-          <div class="plus timer">
-            <button type="button" class="btn">
+          <div class="timer">
+            <button type="button" class="btn plus">
               <i class="glyphicon glyphicon-plus"></i>
             </button>
           </div>
-          <div class="clock timer">25:00</div>
-          <div class="minus timer">
-            <button type="button" class="btn">
+          <div class="clock timer">
+            <span class="minutes"></span>:<span class="seconds"></span>
+          </div>
+          <div class="timer">
+            <button type="button" class="btn minus">
               <i class="glyphicon glyphicon-minus"></i>
             </button>
           </div>
         </div>
 
-        <div class="row">
+        <div class="row controls">
           <!-- Play/reset buttons -->
-          <div class="play controls">
-            <button type="button" class="btn">
-              <i class="glyphicon glyphicon-play"></i>
-            </button>
-          </div>
-          <div class="reset controls">
-            <button type="button" class="btn">
-              <i class="glyphicon glyphicon-repeat"></i>
-            </button>
+          <div class='btn-group' role='group'>
+              <button type="button" class="btn play">
+                <i class="glyphicon glyphicon-play"></i>
+              </button>
+              <button type="button" class="btn pause">
+                <i class="glyphicon glyphicon-pause"></i>
+              </button>
+              <button type="button" class="btn reset">
+                <i class="glyphicon glyphicon-repeat"></i>
+              </button>
           </div>
         </div>
 
@@ -104,5 +107,7 @@
     <!-- Include all compiled plugins (below), or include individual files as
     needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Main jQuery -->
+    <script src="js/main.js"></script>
   </body>
 </html>
