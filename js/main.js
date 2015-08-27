@@ -39,8 +39,7 @@ $(document).ready(function () {
   function startTimer() {
     // disable other buttons
     $('.timer .btn').attr("disabled", true);
-    minutes--;
-    $minutes.text(minutes);
+    $minutes.text(minutes - 1);
     changeTimer();
     clockID = setInterval(changeTimer, 1000);
 
@@ -50,7 +49,6 @@ $(document).ready(function () {
   function pauseTimer() {
     $('.timer .btn').attr("disabled", false);
     clearInterval(clockID);
-    minutes++;
   }
 
   function increaseTimer() {
