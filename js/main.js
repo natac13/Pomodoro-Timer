@@ -28,6 +28,7 @@ $(document).ready(function () {
     $seconds.text(seconds);
     if (minutes === 0 && seconds <= 0) {
       // or run break when ready.
+      alert("BREAK TIME")
       resetTimer();
     } else if (seconds <= 0 && minutes > 0) {
       seconds = 60;
@@ -53,12 +54,14 @@ $(document).ready(function () {
 
   function increaseTimer() {
     minutes++;
+    seconds = 60;
     $minutes.text(minutes);
     $seconds.text("00");
   }
 
   function decreaseTimer() {
     minutes--;
+    seconds = 60;
     $minutes.text(minutes);
     $seconds.text("00");
   }

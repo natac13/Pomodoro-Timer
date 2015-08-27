@@ -8,15 +8,18 @@
 /* As hex codes */
 
 .color-primary-0 { color: #3C91E6 } /* Main Primary color */
-.color-primary-1 { color: #849BB2 }
-.color-primary-2 { color: #0B3056 }
+.color-primary-1 { color: #A0A4AB }
+.color-primary-2 { color: #002070 }
 
 .color-secondary-1 { color: #270F3F } /* Main Secondary color (1) */
-.color-secondary-2 { color: #0CF480 } /* Main Secondary color (2) */
+.color-secondary-2 { color: #589B00 } /* Main Secondary color (2) */
+.color-secondary-3 { color: #24A2A8 }
 
 
 body {
-    background: #849BB2;
+    background: #A0A4AB;
+    font-family: Monospace;
+    text-transform: uppercase;
 }
 .timer {
     display: inline-block;
@@ -42,6 +45,7 @@ button {
 .clock-wrapper button,
 .clock-wrapper .timer {
     height: 100%;
+    margin: auto -0.1em;
 }
 
 .clock-wrapper .btn {
@@ -51,7 +55,7 @@ button {
 }
 
 .clock-wrapper .btn:hover {
-    background: #419334;
+    background: #589B00;
     color: #8490AC;
 }
 
@@ -63,7 +67,8 @@ button {
     width: 75%;
     padding-top: 0.5em;
     font-size: 5em;
-    background: #999;
+    letter-spacing: 0.2em;
+    background: #24A2A8;
 }
 
 .glyphicon-remove {
@@ -82,7 +87,7 @@ button {
 }
 
 .controls .btn:hover {
-    background: #334678;
+    background: #002070;
     color: #9BB7B6;
 }
 
