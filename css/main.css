@@ -8,7 +8,7 @@
 /* As hex codes */
 
 .color-primary-0 { color: #3C91E6 } /* Main Primary color */
-.color-primary-1 { color: #A0A4AB }
+.color-primary-1 { color: #505256 }
 .color-primary-2 { color: #002070 }
 
 .color-secondary-1 { color: #270F3F } /* Main Secondary color (1) */
@@ -17,10 +17,34 @@
 
 
 body {
-    background: #A0A4AB;
+    background: #527A7A;
     font-family: Monospace;
     text-transform: uppercase;
 }
+
+header  h1 {
+    font-size: 4em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #3C91E6;
+    text-shadow: -1px -4px 6px #122C45;
+    margin: 1em;
+}
+
+.activity {
+    font-size: 2em;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    color: #4C0000;
+    border-bottom: 0.15em solid;
+    border-right: 0.15em solid;
+    border-left: 0.15em solid;
+    border-radius: 10em;
+    width: 45%;
+    margin: 0.3em auto;
+    padding-bottom: 0.2em;
+}
+
 .timer {
     display: inline-block;
 }
@@ -29,6 +53,21 @@ body {
 .controls .glyphicon {
     font-size: 2.5em;
 }
+
+.tasks {
+    border: 0.5em ridge #233E00;
+    border-radius: 1em;
+    background: radial-gradient(circle, #ACCD80, #79AF33, #467C00);
+    padding-bottom: 0.5em;
+    margin-top: 2em;
+    box-shadow: 3px 3px 10px rgba(25, 37, 37, 0.8),
+              -3px -3px 10px rgba(25, 37, 37, 0.8);
+}
+
+.tasks h3 {
+    text-shadow: 2px 2px 3px #BEB7C5;
+}
+
 .tasks .glyphicon {
     font-size: 3em;
 }
@@ -40,14 +79,23 @@ button {
 
 .clock-wrapper {
     height: 15em;
+
 }
 
 .clock-wrapper button,
 .clock-wrapper .timer {
     height: 100%;
     margin: auto -0.1em;
+    box-shadow: 0 -3px 10px rgba(25, 37, 37, 0.8);
 }
 
+.clock-wrapper .plus {
+    box-shadow: -3px 0 10px rgba(25, 37, 37, 0.8);
+}
+
+.clock-wrapper .minus {
+    box-shadow: 3px 0 10px rgba(25, 37, 37, 0.8);
+}
 .clock-wrapper .btn {
     background: #A4D39D;
     color: #266C6A;
@@ -55,8 +103,8 @@ button {
 }
 
 .clock-wrapper .btn:hover {
-    background: #589B00;
-    color: #8490AC;
+    background: rgba(88, 155, 0, 0.8);
+    color: #282B34;
 }
 
 .timer {
@@ -64,15 +112,17 @@ button {
 }
 
 .clock {
-    width: 75%;
-    padding-top: 0.5em;
+    padding: 0.5em 1.7em 0 1.7em;
+    color: #0F0F4C;
     font-size: 5em;
-    letter-spacing: 0.2em;
-    background: #24A2A8;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    background: linear-gradient(#ADC199, #2E3526);
 }
 
 .glyphicon-remove {
     color: #FF3232;
+    background: black;
 }
 
 .glyphicon-ok {
@@ -84,10 +134,14 @@ button {
     background: #68779B;
     color: #266C6A;
     width: 14em;
+    box-shadow: 0.1em 0.1em 13px #FAFAFF inset,
+                -0.1em -0.1em 13px #FAFAFF inset;
 }
 
 .controls .btn:hover {
     background: #002070;
     color: #9BB7B6;
+    box-shadow: 0.1em 0.1em 13px #D1FFFF inset,
+                -0.1em -0.1em 13px #D1FFFF inset;
 }
 
